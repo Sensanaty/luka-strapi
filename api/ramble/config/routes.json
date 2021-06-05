@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rambles",
+      "handler": "ramble.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rambles/count",
+      "handler": "ramble.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rambles/id/:id",
+      "handler": "ramble.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rambles/:slug",
+      "handler": "ramble.findSlug",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rambles",
+      "handler": "ramble.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rambles/:id",
+      "handler": "ramble.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rambles/:id",
+      "handler": "ramble.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
