@@ -9,7 +9,7 @@ const { sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
   async findSlug(ctx) {
-    const { slug } = ctx.params;
+    const { slug } = ctx.params.replace(/[*+~.()'"!:@]/g, "-");
 
     const entity = await strapi.services.ramble.find({ slug: slug });
     return sanitizeEntity(entity, { model: strapi.models.ramble });
